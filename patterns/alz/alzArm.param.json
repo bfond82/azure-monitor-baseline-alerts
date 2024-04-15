@@ -3,22 +3,22 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "enterpriseScaleCompanyPrefix": {
-      "value": "contoso"
+      "value": "alz"
     },
     "platformManagementGroup": {
-      "value": "contoso-platform"
+      "value": "alz-platform"
     },
     "IdentityManagementGroup": {
-      "value": "contoso-identity"
+      "value": "alz-identity"
     },
     "managementManagementGroup": {
-      "value": "contoso-management"
+      "value": "alz-management"
     },
     "connectivityManagementGroup": {
-      "value": "contoso-connectivity"
+      "value": "alz-connectivity"
     },
     "LandingZoneManagementGroup": {
-      "value": "contoso-landingzones"
+      "value": "alz-landingzones"
     },
     "enableAMBAConnectivity": {
       "value": "Yes"
@@ -44,7 +44,7 @@
     "policyAssignmentParametersCommon": {
       "value": {
         "ALZMonitorResourceGroupName": {
-          "value": "rg-amba-monitoring-001"
+          "value": "rg-amba-001"
         },
         "ALZMonitorResourceGroupTags": {
           "value": {
@@ -52,7 +52,7 @@
           }
         },
         "ALZMonitorResourceGroupLocation": {
-          "value": "eastus"
+          "value": "westeurope"
         }
       }
     },
@@ -69,13 +69,13 @@
     "policyAssignmentParametersNotificationAssets": {
       "value": {
         "ALZMonitorActionGroupEmail": {
-          "value": ""
+          "value": "bjorn.fondevik@outlook.com"
         },
         "ALZLogicappResourceId": {
-          "value": ""
+          "value": "/subscriptions/0b7b0e2d-97a7-4008-a743-2a0e1589ec7c/resourceGroups/rg-amba-001/providers/Microsoft.Logic/workflows/ysbt7alertreceiver"
         },
         "ALZLogicappCallbackUrl":{
-          "value": ""
+          "value": "https://prod-83.westeurope.logic.azure.com:443/workflows/6d3e3aebd42346e4a9d0aca2cb0d6d12/triggers/When_a_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=JDNBqBofLIe2VZaS0X95542AitZzDctplGyJ6fJL8GM"
         },
         "ALZArmRoleId": {
           "value": ""
@@ -84,7 +84,7 @@
           "value": ""
         },
         "ALZWebhookServiceUri": {
-          "value": ""
+          "value": "https://prod-83.westeurope.logic.azure.com:443/workflows/6d3e3aebd42346e4a9d0aca2cb0d6d12/triggers/When_a_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=JDNBqBofLIe2VZaS0X95542AitZzDctplGyJ6fJL8GM"
         },
         "ALZFunctionResourceId": {
           "value": ""
