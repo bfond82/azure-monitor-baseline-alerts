@@ -8,17 +8,14 @@
     "platformManagementGroup": {
       "value": "alz-platform"
     },
-    "managementSubscriptionId": {
-      "value": "0b7b0e2d-97a7-4008-a743-2a0e1589ec7c"
-    },
     "IdentityManagementGroup": {
-      "value": "alz-platform-identity"
+      "value": "alz-identity"
     },
     "managementManagementGroup": {
-      "value": "alz-platform-management"
+      "value": "alz-management"
     },
     "connectivityManagementGroup": {
-      "value": "alz-platform-connectivity"
+      "value": "alz-connectivity"
     },
     "LandingZoneManagementGroup": {
       "value": "alz-landingzones"
@@ -65,20 +62,31 @@
     "telemetryOptOut": {
       "value": "No"
     },
-    "policyAssignmentParametersCommon": {
+    "bringYourOwnUserAssignedManagedIdentity": {
+      "value": "No"
+    },
+    "bringYourOwnUserAssignedManagedIdentityResourceId": {
+      "value": ""
+    },
+    "userAssignedManagedIdentityName": {
+      "value": "id-amba-prod-001"
+    },
+    "managementSubscriptionId": {
+      "value": ""
+    },
+    "ALZMonitorResourceGroupName": {
+      "value": "rg-amba-001"
+    },
+    "ALZMonitorResourceGroupLocation": {
+      "value": "westeurope"
+    },
+    "ALZMonitorResourceGroupTags": {
       "value": {
-        "ALZMonitorResourceGroupName": {
-          "value": "rg-amba-001"
-        },
-        "ALZMonitorResourceGroupTags": {
-          "value": {
-            "Project": "amba-monitoring"
-          }
-        },
-        "ALZMonitorResourceGroupLocation": {
-          "value": "westeurope"
-        }
+        "Project": "amba-monitoring"
       }
+    },
+    "ALZMonitorDisableTagName": {
+      "value": "MonitorDisable"
     },
     "ALZMonitorDisableTagValues": {
       "value": [
@@ -88,33 +96,39 @@
         "Sandbox"
       ]
     },
-    "policyAssignmentParametersNotificationAssets": {
-      "value": {
-        "ALZMonitorActionGroupEmail": {
-          "value": "bjorn.fondevik@outlook.com"
-        },
-        "ALZLogicappResourceId": {
-          "value": "/subscriptions/0b7b0e2d-97a7-4008-a743-2a0e1589ec7c/resourceGroups/rg-amba-001/providers/Microsoft.Logic/workflows/ysbt7alertreceiver"
-        },
-        "ALZLogicappCallbackUrl":{
-          "value": "https://prod-83.westeurope.logic.azure.com:443/workflows/6d3e3aebd42346e4a9d0aca2cb0d6d12/triggers/When_a_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=JDNBqBofLIe2VZaS0X95542AitZzDctplGyJ6fJL8GM"
-        },
-        "ALZArmRoleId": {
-          "value": ""
-        },
-        "ALZEventHubResourceId": {
-          "value": ""
-        },
-        "ALZWebhookServiceUri": {
-          "value": "https://prod-83.westeurope.logic.azure.com:443/workflows/6d3e3aebd42346e4a9d0aca2cb0d6d12/triggers/When_a_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=JDNBqBofLIe2VZaS0X95542AitZzDctplGyJ6fJL8GM"
-        },
-        "ALZFunctionResourceId": {
-          "value": ""
-        },
-        "ALZFunctionTriggerUrl": {
-          "value": ""
-        }
-      }
+    "ALZMonitorActionGroupEmail": {
+      "value": [
+        "bjorn.fondevik@outlook.com"
+      ]
+    },
+    "ALZLogicappResourceId": {
+      "value": "/subscriptions/0b7b0e2d-97a7-4008-a743-2a0e1589ec7c/resourceGroups/rg-amba-001/providers/Microsoft.Logic/workflows/ysbt7alertreceiver"
+    },
+    "ALZLogicappCallbackUrl": {
+      "value": "https://prod-83.westeurope.logic.azure.com:443/workflows/6d3e3aebd42346e4a9d0aca2cb0d6d12/triggers/When_a_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=JDNBqBofLIe2VZaS0X95542AitZzDctplGyJ6fJL8GM"
+    },
+    "ALZArmRoleId": {
+      "value": []
+    },
+    "ALZEventHubResourceId": {
+      "value": []
+    },
+    "ALZWebhookServiceUri": {
+      "value": [
+        "https://prod-83.westeurope.logic.azure.com:443/workflows/6d3e3aebd42346e4a9d0aca2cb0d6d12/triggers/When_a_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=JDNBqBofLIe2VZaS0X95542AitZzDctplGyJ6fJL8GM"
+      ]
+    },
+    "ALZFunctionResourceId": {
+      "value": ""
+    },
+    "ALZFunctionTriggerUrl": {
+      "value": ""
+    },
+    "BYOActionGroup": {
+      "value": []
+    },
+    "BYOAlertProcessingRule": {
+      "value": ""
     },
     "policyAssignmentParametersServiceHealth": {
       "value": {
