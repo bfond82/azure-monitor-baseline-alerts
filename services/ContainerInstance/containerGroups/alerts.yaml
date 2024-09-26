@@ -22,8 +22,9 @@
       - '*'
     failingPeriods:
       numberOfEvaluationPeriods: 4
-      minFailingPeroidsToAlert: minFailingPeroidsToAlert
+      minFailingPeriodsToAlert: 4
     alertSensitivity: Low
+  guid: 970af9d6-9212-420d-af7b-4fbd790a2596
 - name: MemoryUsage
   description: Total memory usage in byte.
   type: Metric
@@ -48,8 +49,9 @@
       - '*'
     failingPeriods:
       numberOfEvaluationPeriods: 4
-      minFailingPeroidsToAlert: minFailingPeroidsToAlert
+      minFailingPeriodsToAlert: 4
     alertSensitivity: Low
+  guid: 4758386e-12ee-411a-9e49-445b5c5c3051
 - name: NetworkBytesReceivedPerSecond
   description: The network bytes received per second.
   type: Metric
@@ -69,8 +71,9 @@
     criterionType: DynamicThresholdCriterion
     failingPeriods:
       numberOfEvaluationPeriods: 4
-      minFailingPeroidsToAlert: minFailingPeroidsToAlert
+      minFailingPeriodsToAlert: 4
     alertSensitivity: Low
+  guid: 8beff742-9cd8-43ed-9680-57ae35bee6e8
 - name: NetworkBytesTransmittedPerSecond
   description: The network bytes transmitted per second.
   type: Metric
@@ -90,5 +93,6 @@
     criterionType: DynamicThresholdCriterion
     failingPeriods:
       numberOfEvaluationPeriods: 4
-      minFailingPeroidsToAlert: minFailingPeroidsToAlert
+      minFailingPeriodsToAlert: 4
     alertSensitivity: Low
+  guid: 5b26b965-2662-4a89-9d7e-771486357f39

@@ -15,7 +15,7 @@ Run the following commands:
 
 ```powershell
 $location = "Your Azure location of choice"
-$pseudoRootManagementGroup = "The pseudo root management group id parenting the identity, management and connectivity management groups"
+$pseudoRootManagementGroup = "The pseudo root management group id parenting the Platform and Landing Zones management groups"
 ```
 
 {{< hint type=important >}}
@@ -50,7 +50,7 @@ If you customized the policies as documented at [How to modify individual polici
 {{< /hint >}}
 
 ```powershell
-New-AzManagementGroupDeployment -Name "amba-GeneralDeployment" -ManagementGroupId $pseudoRootManagementGroup -Location $location -TemplateUri "https://raw.githubusercontent.com/Azure/azure-monitor-baseline-alerts/2024-03-01/patterns/alz/alzArm.json" -TemplateParameterFile ".\patterns\alz\alzArm.param.json"
+New-AzManagementGroupDeployment -Name "amba-GeneralDeployment" -ManagementGroupId $pseudoRootManagementGroup -Location $location -TemplateUri "https://raw.githubusercontent.com/Azure/azure-monitor-baseline-alerts/2024-09-02/patterns/alz/alzArm.json" -TemplateParameterFile ".\patterns\alz\alzArm.param.json"
 ```
 
 ## Next steps

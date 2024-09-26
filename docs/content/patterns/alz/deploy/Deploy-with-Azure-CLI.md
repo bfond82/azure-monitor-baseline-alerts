@@ -15,7 +15,7 @@ Run the following commands:
 
 ```bash
 location="Your Azure location of choice"
-pseudoRootManagementGroup="The pseudo root management group id parenting the identity, management and connectivity management groups"
+pseudoRootManagementGroup="The pseudo root management group id parenting the Platform and Landing Zones management groups"
 ```
 
 {{< hint type=Important >}}
@@ -42,7 +42,7 @@ If you customized the policies as documented at [How to modify individual polici
 {{< /hint >}}
 
 ```bash
-az deployment mg create --name "amba-GeneralDeployment" --template-uri https://raw.githubusercontent.com/Azure/azure-monitor-baseline-alerts/2024-03-01/patterns/alz/alzArm.json --location $location --management-group-id $pseudoRootManagementGroup --parameters ".\patterns\alz\alzArm.param.json"
+az deployment mg create --name "amba-GeneralDeployment" --template-uri https://raw.githubusercontent.com/Azure/azure-monitor-baseline-alerts/2024-09-02/patterns/alz/alzArm.json --location $location --management-group-id $pseudoRootManagementGroup --parameters ".\patterns\alz\alzArm.param.json"
 ```
 
 ## Next steps

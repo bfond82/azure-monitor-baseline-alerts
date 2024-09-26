@@ -35,7 +35,7 @@ Alerts, action groups and alert processing rules are created as follows:
 7. For leveraging the log alerts for Virtual Machines, ensure that VM Insights is enabled for the Virtual Machines to be monitored. For more information on VM Insights deployment, see [here](https://learn.microsoft.com/en-us/azure/azure-monitor/vm/vminsights-enable-overview) . Note only the performance collection of the VM insights solution is required  for the current alerts to deploy.
 
 {{< hint type=note >}}
-While it´s recommended to implement the alert policies and initiatives to an ALZ Management Group hierarchy, it is not a technical requirement. These policies and initiatives can be implemented in existing brownfield scenarios that don´t adhere to the ALZ Management Group hierarchy. For example, in hierarchies where there is a single management group, or where the structure does not align to ALZ. At least one management group is required. In case you haven't implemented management groups, we included guidance on how to get started.
+While it´s recommended to implement the alert policies and initiatives to an ALZ Management Group hierarchy, it is not a technical requirement (avoid Tenant Root Group assignments, to minimize debugging inherited policies at lower-level mangement groups, see [CAF documentation](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups)). These policies and initiatives can be implemented in existing brownfield scenarios that don´t adhere to the ALZ Management Group hierarchy. For example, in hierarchies where there is a single management group, or where the structure does not align to ALZ. At least one management group is required. In case you haven't implemented management groups, we included guidance on how to get started.
 {{< /hint >}}
 
 ## Getting started
@@ -43,6 +43,7 @@ While it´s recommended to implement the alert policies and initiatives to an AL
 - Fork this repo to your own GitHub organization, you should not create a direct clone of the repo. Pull requests based off direct clones of the repo will not be allowed.
 - Clone the repo from your own GitHub organization to your developer workstation.
 - Review your current configuration to determine what scenario applies to you. We have guidance that will help deploy these policies and initiatives whether you are aligned with Azure Landing Zones, or use other management group hierarchy, or you may not be using management groups at all. If you know your type of management group hierarchy, you can skip forward to your preferred deployment method:
+  - [Deploy via the Azure Portal (Preview)](../Deploy-via-Azure-Portal-UI)
   - [Automated deployment with GitHub Actions](../Deploy-with-GitHub-Actions) (recommended method)
   - [Automated deployment with Azure Pipelines](../Deploy-with-Azure-Pipelines) (recommended method)
   - [Manual deployment with Azure CLI](../Deploy-with-Azure-CLI)
@@ -68,12 +69,13 @@ The diagram below shows the flow using the orange dash-lines of the policy initi
 
 The other monitoring initiatives are each assigned at specific platform landing zone management groups and workload landing zones. The flows for these are in blue dash-lines.
 
-![Azure Monitor Baseline Alerts policy initiative flows](../../media/amba-policy-initiative-flow.png)
+![Azure Monitor Baseline Alerts policy initiative flows](../../media/azure-monitor-baseline-alerts-policy-initiative-flow.png)
 
-Click [here](../../media/AMBA-Diagrams.vsdx) if you'd like to download this Visio diagram.
+*Download a [Visio file](../../media/AMBA-Diagrams.vsdx) of this architecture.*
 
 If you have this management group hierarchy, you can skip forward to your preferred deployment method:
 
+- [Deploy via the Azure Portal (Preview)](../Deploy-via-Azure-Portal-UI)
 - [Deploy with GitHub Actions](../Deploy-with-GitHub-Actions)
 - [Deploy with Azure Pipelines](../Deploy-with-Azure-Pipelines)
 - [Deploy with Azure CLI](../Deploy-with-Azure-CLI)
@@ -106,6 +108,7 @@ We recommend that you review the [initiative definitions](https://github.com/Azu
 
 If you have this management group hierarchy, you can skip forward to your preferred deployment method:
 
+- [Deploy via the Azure Portal (Preview)](../Deploy-via-Azure-Portal-UI)
 - [Deploy with GitHub Actions](../Deploy-with-GitHub-Actions)
 - [Deploy with Azure Pipelines](../Deploy-with-Azure-Pipelines)
 - [Deploy with Azure CLI](../Deploy-with-Azure-CLI)
@@ -117,6 +120,7 @@ Refer to our [documentation](https://learn.microsoft.com/en-us/azure/governance/
 
 If you implemented the recommended management group design, you can skip forward to your preferred deployment method, following the ALZ aligned guidance.
 
+- [Deploy via the Azure Portal (Preview)](../Deploy-via-Azure-Portal-UI)
 - [Deploy with GitHub Actions](../Deploy-with-GitHub-Actions)
 - [Deploy with Azure Pipelines](../Deploy-with-Azure-Pipelines)
 - [Deploy with Azure CLI](../Deploy-with-Azure-CLI)
@@ -193,6 +197,7 @@ In some scenarios, it may be necessary to remove everything deployed by the ALZ 
 ## Next steps
 
 - To customize policy assignments, please proceed with [Customize Policy Assignment](../Customize-Policy-Assignment)
+- [Deploy via the Azure Portal (Preview)](../Deploy-via-Azure-Portal-UI)
 - To deploy with GitHub Actions, please proceed with [Deploy with GitHub Actions](../Deploy-with-GitHub-Actions)
 - To deploy with Azure Pipelines, please proceed with [Deploy with Azure Pipelines](../Deploy-with-Azure-Pipelines)
 - To deploy with Azure CLI, please proceed with [Deploy with Azure CLI](../Deploy-with-Azure-CLI)
