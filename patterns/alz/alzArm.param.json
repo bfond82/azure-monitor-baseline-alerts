@@ -8,6 +8,9 @@
     "platformManagementGroup": {
       "value": "alz-platform"
     },
+    "managementSubscriptionId": {
+      "value": "0b7b0e2d-97a7-4008-a743-2a0e1589ec7c"
+    },
     "IdentityManagementGroup": {
       "value": "alz-platform-identity"
     },
